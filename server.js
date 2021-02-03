@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 // SETUP MONGOOSE
 const db = require('./models/index')
 const Role = db.role
-const dbURI = process.env.MONDOGUIR || `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
+// const dbURI = process.env.MONDOGUIR || `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
+const dbURI = 'mongodb://admin:GAProject4@cluster0-shard-00-00.rh7cy.mongodb.net:27017,cluster0-shard-00-01.rh7cy.mongodb.net:27017,cluster0-shard-00-02.rh7cy.mongodb.net:27017/covidDB?ssl=true&replicaSet=atlas-nvvg2y-shard-0&authSource=admin&retryWrites=true&w=majority'
 
 db.mongoose
     .connect(dbURI,{
